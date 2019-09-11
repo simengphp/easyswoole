@@ -48,6 +48,10 @@ class ComposerStaticInit1935c9e877238a72bf901ead025ebb0d
         array (
             'Cron\\' => 5,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -134,6 +138,10 @@ class ComposerStaticInit1935c9e877238a72bf901ead025ebb0d
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/App',
         ),
     );
 
