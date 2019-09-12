@@ -19,7 +19,7 @@ class Router extends AbstractRouter
     {
         // TODO: Implement initialize() method.
 //        $routeCollector->get('/user', '/index.html');
-        $routeCollector->get('/rpc', '/Api/User/Index/index');
+        $routeCollector->get('/rl', '/Api/User/Index/index');
 
 //        $routeCollector->get('/', function (Request $request, Response $response) {
 //            $response->write('this router index');
