@@ -10,7 +10,7 @@ class Index extends Controller
     {
         // TODO: Implement index() method.
         $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
-        $db = new \EasySwoole\Mysqli\Mysqli($conf);
+        $db = new \EasySwoole\Mysqli\Client($conf);
         $data = $db->get('test');//获取一个表的数据
         var_dump($data);
     }
