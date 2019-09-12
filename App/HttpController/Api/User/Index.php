@@ -16,10 +16,10 @@ class Index extends Controller
             //构建sql
             $client->queryBuilder()->get('test');
             //执行sql
-            var_dump($client->execBuilder());
+            var_dump('table:'.PHP_EOL.$client->execBuilder());
         });
         $builder = new QueryBuilder();
         $ret = $builder->where('m_id',2)->get('test');
-        var_dump($ret);
+        var_dump('SQL_G'.PHP_EOL.$ret);
     }
 }
