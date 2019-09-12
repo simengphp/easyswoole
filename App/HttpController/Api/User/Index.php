@@ -9,6 +9,9 @@ class Index extends Controller
     function index()
     {
         // TODO: Implement index() method.
-        $this->response()->write('hello world');
+        $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
+        $db = new \EasySwoole\Mysqli\Mysqli($conf);
+        $data = $db->get('test');//获取一个表的数据
+        var_dump($data);
     }
 }
