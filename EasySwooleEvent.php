@@ -9,6 +9,7 @@
 namespace EasySwoole\EasySwoole;
 
 
+use EasySwoole\Component\Di;
 use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
 use EasySwoole\Http\Request;
@@ -25,6 +26,8 @@ class EasySwooleEvent implements Event
 
     public static function mainServerCreate(EventRegister $register)
     {
+        //Di::getInstance()->set();
+        var_dump(11111);
         // TODO: Implement mainServerCreate() method.
     }
 
