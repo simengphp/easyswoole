@@ -2,6 +2,7 @@
 namespace App\HttpController\Api\User;
 
 use EasySwoole\Http\AbstractInterface\Controller;
+use EasySwoole\Mysqli\QueryBuilder;
 
 class Index extends Controller
 {
@@ -10,8 +11,15 @@ class Index extends Controller
     {
         // TODO: Implement index() method.
         $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
-        $db = new \EasySwoole\Mysqli\Client($conf);
-        $data = $db->get('test');//获取一个表的数据
-        var_dump($data);
+        $client = new \EasySwoole\Mysqli\Client($conf);
+        go(function ()use($client){
+            //构建sql
+            $client->queryBuilder()->get('user_list');
+            //执行sql
+            var_dump($client->execBuilder());
+        });
+        $builder = new QueryBuilder();
+        $ret = $builder->where('m_id',2)->get('test');
+        var_dump($ret);
     }
 }
