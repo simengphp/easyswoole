@@ -14,6 +14,7 @@ use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
 use EasySwoole\Http\Request;
 use EasySwoole\Http\Response;
+use App\Process\HotReload;
 
 class EasySwooleEvent implements Event
 {
