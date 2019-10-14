@@ -9,7 +9,6 @@ class Index extends Controller
 
     function index()
     {
-        echo 33333333;
         // TODO: Implement index() method.
         $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
         $client = new \EasySwoole\Mysqli\Client($conf);
@@ -17,10 +16,11 @@ class Index extends Controller
             //构建sql
             $client->queryBuilder()->get('test');
             //执行sql
-            var_dump('table:'.PHP_EOL.$client->execBuilder());
+            $client->execBuilder();
         });
         $builder = new QueryBuilder();
         $ret = $builder->where('m_id',2)->get('test');
-        var_dump('SQL_G'.PHP_EOL.$ret);
+        $data = json_encode($ret);
+        $this->response()->write($data);
     }
 }
