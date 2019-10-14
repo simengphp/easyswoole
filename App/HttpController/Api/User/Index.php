@@ -20,7 +20,6 @@ class Index extends Controller
         });
         $builder = new QueryBuilder();
         $ret = $builder->where('m_id',2)->get('test');
-        $data = json_encode($ret);
-        $this->response()->write($data);
+        var_dump($ret);
     }
 }
