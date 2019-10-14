@@ -9,7 +9,7 @@ class Index extends Controller
 
     function index()
     {
-        echo 222;
+        echo 33333333;
         // TODO: Implement index() method.
         $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
         $client = new \EasySwoole\Mysqli\Client($conf);
