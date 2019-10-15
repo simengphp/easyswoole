@@ -10,7 +10,6 @@
 
     use EasySwoole\Component\Pool\AbstractPool;
     use EasySwoole\Mysqli\Config;
-    use EasySwoole\Mysqli\Mysqli;
 
     class MysqlPool extends AbstractPool
     {

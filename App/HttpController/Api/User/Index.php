@@ -27,7 +27,7 @@ class Index extends Controller
 
     public function test()
     {
-        $db = MysqlPool::defer(); //用到你结束为止
+        $db = MysqlPool::defer();//用到你结束为止
         $db->where('id', 1)->get('test');
         $db->where('id', 1)->get('test');
 
